@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="table_container mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Identificador </th>
+        <td mat-cell *matCellDef="let genre"> {{genre.id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Nombre del genero</th>
+        <td mat-cell *matCellDef="let genre"> {{genre.name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let genre">
+          <button mat-icon-button>
+            <mat-icon class="icon-edit" (click)="editGenre(genre)">edit</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon class="icon-delete" (click)="delete(genre)">clear</mat-icon>
+          </button> </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+  <div class="buttons">
+    <button mat-flat-button class="black_button_category" (click)="newGenre()">Nuevo genero</button>
+  </div>
+</div>

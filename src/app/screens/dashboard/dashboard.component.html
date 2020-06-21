@@ -1,0 +1,28 @@
+<div class="game_container">
+  <div class="games_filter">
+    <div class="form_filter">
+      <mat-form-field appearance="outline" class="input_text_filter">
+        <input type="text" matInput placeholder="Filtro" [(ngModel)]="filterName">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="input_text_filter">
+        <mat-label>Genero</mat-label>
+        <mat-select disableRipple [formControl]="genreControl">
+          <mat-option *ngFor="let genre of genres" [value]="genre">{{genre.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <button mat-flat-button class="white_button">Limpiar</button>
+      <button mat-flat-button class="black_button">Filtrar</button>
+    </div>
+  </div>
+  <div class="game_list">
+    <div class="game_card" *ngFor="let book of books; let i = index;">
+      <app-book-card [book]="book" (click)="editBook(book)">
+      </app-book-card>
+    </div>
+  </div>
+  <div class="buttons">
+    <button mat-flat-button class="black_button_category" (click)="newBook()">Nuevo libro</button>
+  </div>
+</div>

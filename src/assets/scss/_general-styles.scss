@@ -1,0 +1,231 @@
+// ------HEADER------>>
+
+.header_container {
+  display: flex;
+  width: 100%;
+}
+
+.header_title {
+  display: flex;
+  flex-direction: row;
+  margin: 1em;
+
+}
+
+.header_icon {
+  align-items: center;
+  display: flex;
+}
+
+.header_buttons {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+
+.header_button {
+  margin: 1em;
+
+  a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, .87);
+
+    &:hover {
+      color: blue;
+    }
+  }
+}
+
+
+
+.header_login {
+  align-self: center;
+  width: 100%;
+  text-align: end;
+}
+
+.header_stick {
+  margin-left: 2em;
+  margin-right: 1em;
+}
+
+// ------TABLE------>>
+
+.container {
+  height: 100%;
+  margin: 3em;
+}
+
+.table_container {
+  height: 70vh;
+  overflow: auto;
+}
+
+.table_paginator_container {
+  height: 62vh;
+  overflow: auto;
+}
+
+.mat-column-action {
+  width: 10%;
+  text-align: right;
+  text-align-last: center;
+}
+
+th.mat-header-cell {
+  font: inherit;
+  color: currentColor;
+}
+
+
+// ------CATEGORY DIALOG------>>
+
+.dialog_title {
+  font-weight: bold;
+  font-size: 1.17em;
+}
+
+.dialog_body {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+}
+
+.dialog_identificator {
+  width: 10vw;
+}
+
+.dialog_name {
+  width: 25vw;
+}
+
+// ------DIALOG CONFIRMATION------>>
+
+.confirmation_title {
+  font-weight: bold;
+  font-size: 1.4em;
+  margin-bottom: 1em;
+
+}
+
+// ------BUTTONS------>>
+
+.black_button {
+  color: white;
+  background-color: black;
+  margin-left: 1em;
+  width: 7vw;
+}
+
+.black_button_category {
+  color: white;
+  background-color: black;
+  margin-left: 1em;
+}
+
+.white_button {
+  border: solid;
+  width: 7vw;
+}
+
+.confirmation_buttons {
+  display: flex;
+  place-content: space-around;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2em;
+}
+
+
+// ------GAMES FILTER---->
+
+.game_container {
+  margin: 2em;
+}
+
+.games_filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1em;
+  padding-right: 1em;
+  background: rgba(0, 0, 0, .02);
+}
+
+.game_list {
+  display: flex;
+  flex-flow: wrap;
+  overflow: auto;
+  height: 59vh;
+}
+
+.game_card {
+  display: flex;
+  width: 33%;
+}
+
+
+.form_filter {
+  width: 40%;
+  display: flex;
+  place-content: space-between;
+}
+
+.input_text_filter {
+  width: 18vw;
+}
+
+
+//------GAME CARD ---->
+
+.card_container {
+  border: solid;
+  margin: 1em;
+}
+
+.card_photo {
+  width: 55%;
+}
+
+.card_body {
+  display: flex;
+  flex-direction: row;
+}
+
+.card_description {
+  display: flex;
+  flex-direction: column;
+}
+
+.card_propertie {
+  display: flex;
+  flex-direction: row;
+  font-weight: bolder;
+}
+
+.normal_font {
+  font-weight: normal;
+}
+
+.card_description_title {
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+  background: rgba(0, 0, 0, 0.11);
+}
+
+.card_description_properties {
+  margin-top: 1em;
+}
+
+.card_body_photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 15em;
+  padding-right: 16px;
+}

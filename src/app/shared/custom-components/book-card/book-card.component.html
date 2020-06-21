@@ -1,0 +1,29 @@
+<div class="card_container">
+  <mat-card>
+    <div class="card_body">
+      <div class="card_body_photo">
+        <img [src]="photo" class="card_photo">
+      </div>
+      <div class="card_description">
+        <div class="card_description_title">{{book.title}}</div>
+        <div class="card_description_properties">
+          <div class="card_propertie">
+            Año de publicación: <span class="normal_font"> +{{book.year}}</span>
+          </div>
+          <div class="card_propertie">
+            Editorial: <span class="normal_font">{{book.genre.name}}</span>
+          </div>
+          <div class="card_propertie">
+            Autor: <span class="normal_font">{{book.author.name}}</span>
+          </div>
+          <div class="card_propertie">
+            Genero: <span class="normal_font">{{book.genre.name}}</span>
+          </div>
+          <div class="card_propertie">
+            Descripcion: <span class="normal_font">{{book.review}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</div>

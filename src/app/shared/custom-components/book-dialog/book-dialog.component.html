@@ -1,0 +1,65 @@
+<div>
+  <div>
+    <div class="dialog_title">{{title}}</div>
+  </div>
+  <div class="dialog_body">
+    <div>
+      <mat-form-field appearance="outline" class="dialog_identificator">
+        <mat-label>Identificador</mat-label>
+        <input type="number" matInput placeholder="Identificador" disabled [(ngModel)]="book.id">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="dialog_name">
+        <mat-label>Título</mat-label>
+        <input type="text" matInput placeholder="Título..." required [(ngModel)]="book.title">
+        <mat-error>Añade el título del libro</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="dialog_identificator">
+        <mat-label>Año de publicación</mat-label>
+        <input matInput type="number" placeholder="Edad" required [(ngModel)]="book.year">
+        <mat-error>Seleccione año de publicación</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="dialog_name">
+        <mat-label>Genero</mat-label>
+        <mat-select disableRipple [formControl]="genreControl" required>
+          <mat-option *ngFor="let genre of genres" [value]="book.genre">{{genre.name}}</mat-option>
+        </mat-select>
+        <mat-error>Seleccione un genero para el libro</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="dialog_name">
+        <mat-label>Autor</mat-label>
+        <mat-select disableRipple [formControl]="authorControl" required>
+          <mat-option *ngFor="let author of authors" [(value)]="book.author">{{author.name}}</mat-option>
+        </mat-select>
+        <mat-error>Seleccione un autor para el libro</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="dialog_name">
+        <mat-label>Editorial</mat-label>
+        <mat-select disableRipple [formControl]="publisherControl" required>
+          <mat-option *ngFor="let publisher of publishers" [(value)]="book.publisher">{{publisher.name}}</mat-option>
+        </mat-select>
+        <mat-error>Seleccione una editorial para el libro</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="dialog_name">
+        <mat-label>Descripción</mat-label>
+        <input type="text" matInput placeholder="Descripción..." required [(ngModel)]="book.review">
+        <mat-error>Añade la descripción libro</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="buttons">
+    <button mat-button class="white_button" (click)="onClose()">Cerrar</button>
+    <button mat-button class="black_button">Guardar</button>
+  </div>
+</div>

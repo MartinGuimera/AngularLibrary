@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="mat-elevation-z8">
+    <div class="table_paginator_container">
+      <table mat-table [dataSource]="dataSource">
+
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> Identificador </th>
+          <td mat-cell *matCellDef="let author"> {{author.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Nombre del autor</th>
+          <td mat-cell *matCellDef="let author"> {{author.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let author">
+            <button mat-icon-button>
+              <mat-icon class="icon-edit" (click)="editAuthor(author)">edit</mat-icon>
+            </button>
+            <button mat-icon-button>
+              <mat-icon class="icon-delete" (click)="delete(author)">clear</mat-icon>
+            </button> </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+    <div>
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </div>
+  </div>
+  <div class="buttons">
+    <button mat-flat-button class="black_button_category" (click)="newAuthor()">Nuevo autor</button>
+  </div>
+</div>

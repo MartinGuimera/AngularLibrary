@@ -1,0 +1,29 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <div class="header_container">
+      <div class="header_title">
+        <div class="header_icon">
+          <mat-icon>menu_book</mat-icon>
+        </div>
+        <div>
+          <p>Biblioteca</p>
+        </div>
+        <div class="header_stick">
+          <p>|</p>
+        </div>
+      </div>
+      <div class="header_buttons">
+        <div class="header_button"><a routerLink="/books" id="link1" (click)="cambioColor1()">Books</a></div>
+        <div class="header_button">
+          <a routerLink="/genres" id="link2" (click)="cambioColor2()">Genres</a>
+        </div>
+        <div class="header_button"><a routerLink="/authors" id="link3" (click)="cambioColor3()">Authors</a></div>
+      </div>
+      <div class="header_login">
+        <div>
+          <button mat-button>Sign in <mat-icon>portrait</mat-icon></button>
+        </div>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
