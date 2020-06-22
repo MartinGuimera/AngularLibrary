@@ -14,6 +14,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [],
@@ -23,6 +24,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
         CommonModule,
         BrowserModule,
         FormsModule,
+        HttpClientModule,
         ReactiveFormsModule,
         MatToolbarModule,
         MatIconModule,
@@ -41,6 +43,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
         CommonModule,
         BrowserModule,
         FormsModule,
+        HttpClientModule,
         ReactiveFormsModule,
         MatToolbarModule,
         MatIconModule,

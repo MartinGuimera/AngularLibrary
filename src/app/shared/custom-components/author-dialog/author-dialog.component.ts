@@ -1,3 +1,4 @@
+import { AuthorService } from './../../../core/services/author/author.service';
 import { Component, OnInit, Inject } from '@angular/core';
 import { Author } from 'src/app/core/management/author/author';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
@@ -14,7 +15,8 @@ export class AuthorDialogComponent implements OnInit {
 
   constructor(
     public dialogRef: MatDialogRef<AuthorDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private authorService : AuthorService,
   ) { }
 
   ngOnInit() {
@@ -30,6 +32,12 @@ export class AuthorDialogComponent implements OnInit {
 
   onClose() {
     this.dialogRef.close();
+  }
+
+  onSave() {
+    this.authorService.saveOrUpdate(this.author).subscribe(result => {
+      this.onClose();
+    })
   }
 
 }

@@ -55,18 +55,18 @@ export class DashboardComponent implements OnInit {
 }
 
 const BOOK_DATA: Book[] = [
-  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción', publisher: { id: 2, name: 'Klaus Teuber' } },
-  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción', publisher: { id: 2, name: 'Klaus Teuber' } },
-  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción', publisher: { id: 2, name: 'Klaus Teuber' } },
-  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción', publisher: { id: 2, name: 'Klaus Teuber' } },
-  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción', publisher: { id: 2, name: 'Klaus Teuber' } },
-  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción', publisher: { id: 2, name: 'Klaus Teuber' } },
-  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción', publisher: { id: 2, name: 'Klaus Teuber' } },
-  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción', publisher: { id: 2, name: 'Klaus Teuber' } },
-  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción', publisher: { id: 2, name: 'Klaus Teuber' } },
-  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción', publisher: { id: 2, name: 'Klaus Teuber' } },
-  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción', publisher: { id: 2, name: 'Klaus Teuber' } },
-  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción', publisher: { id: 2, name: 'Klaus Teuber' } },
+  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción' },
+  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción' },
+  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción' },
+  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción' },
+  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción' },
+  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción' },
+  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción' },
+  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción' },
+  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción' },
+  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción' },
+  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción' },
+  { id: 1, title: 'La Generala', year: 6, genre: { id: 1, name: 'Dados' }, author: { id: 2, name: 'Klaus Teuber' }, review: 'Esto es una prueba, no te asustes, aqui va la descripción' },
 
 
 ]

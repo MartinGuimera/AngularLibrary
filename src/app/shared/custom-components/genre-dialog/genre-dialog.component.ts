@@ -1,6 +1,7 @@
 import { Genre } from './../../../core/management/genre/genre';
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { GenreService } from 'src/app/core/services/genre/genre.service';
 
 @Component({
   selector: 'app-genre-dialog',
@@ -14,7 +15,8 @@ export class GenreDialogComponent implements OnInit {
 
   constructor(
     public dialogRef: MatDialogRef<GenreDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private genreService: GenreService,
   ) { }
 
   ngOnInit() {
@@ -30,6 +32,13 @@ export class GenreDialogComponent implements OnInit {
 
   onClose() {
     this.dialogRef.close();
+  }
+
+
+  onSave(){
+    this.genreService.saveOrUpdate(this.genre).subscribe(result => {
+      this.onClose();
+    });
   }
 
 }

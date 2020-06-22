@@ -4,7 +4,6 @@ import { Genre } from '../genre/genre';
 export class Book {
     id: number;
     title: string;
-    publisher: Publisher;
     year: number;
     author: Author;
     review: string;

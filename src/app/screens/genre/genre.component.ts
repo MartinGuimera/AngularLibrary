@@ -1,3 +1,4 @@
+import { GenreService } from './../../core/services/genre/genre.service';
 import { Genre } from './../../core/management/genre/genre';
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
@@ -17,7 +18,7 @@ export class GenreComponent implements OnInit {
 
   constructor(
     private dialog: MatDialog,
-
+    private genreService : GenreService,
   ) { }
 
   ngOnInit() {
@@ -49,7 +50,7 @@ export class GenreComponent implements OnInit {
     });
   }
 
-  delete(category: Genre) {
+  delete(genre: Genre) {
     const dialogRef = this.dialog.open(DialogConfirmationComponent, {
       disableClose: true,
       width: "auto",
@@ -59,7 +60,9 @@ export class GenreComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        //delete susbscription
+        this.genreService.deleteGenre(genre.id).subscribe(result => {
+          this.ngOnInit();
+        })
       }
     });
   }

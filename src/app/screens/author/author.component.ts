@@ -1,3 +1,4 @@
+import { AuthorService } from './../../core/services/author/author.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Author } from 'src/app/core/management/author/author';
@@ -20,6 +21,7 @@ export class AuthorComponent implements OnInit {
 
   constructor(
     private dialog: MatDialog,
+    private authorService : AuthorService,
   ) { }
 
   ngOnInit() {
@@ -61,7 +63,9 @@ export class AuthorComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        //delete susbscription
+        this.authorService.deleteAuthor(author.id).subscribe(result => {
+          this.ngOnInit();
+        });
       }
     });
   }
