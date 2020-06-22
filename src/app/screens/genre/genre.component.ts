@@ -30,7 +30,7 @@ export class GenreComponent implements OnInit {
     const dialogRef = this.dialog.open(GenreDialogComponent, {
       width: "auto",
       height: "auto",
-      data: { title: "Nueva Genro" }
+      data: { title: "New Genre" }
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -42,7 +42,7 @@ export class GenreComponent implements OnInit {
     const dialogRef = this.dialog.open(GenreDialogComponent, {
       width: "auto",
       height: "auto",
-      data: { title: "Editar genero", genre: genre }
+      data: { title: "Edit genre", genre: genre }
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -55,7 +55,7 @@ export class GenreComponent implements OnInit {
       disableClose: true,
       width: "auto",
       height: "auto",
-      data: { title: "¿Desea eliminar el genero?" }
+      data: { title: "Do you want to delete genre?" }
     });
 
     dialogRef.afterClosed().subscribe(result => {

@@ -31,7 +31,7 @@ export class DashboardComponent implements OnInit {
     const dialogRef = this.dialog.open(BookDialogComponent, {
       width: "auto",
       height: "auto",
-      data: { title: "Nuevo Libro", authors: this.authors, genres: this.genres }
+      data: { title: "New book", authors: this.authors, genres: this.genres }
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -43,7 +43,7 @@ export class DashboardComponent implements OnInit {
     const dialogRef = this.dialog.open(BookDialogComponent, {
       width: "auto",
       height: "auto",
-      data: { title: "Editar Libro", authors: this.authors, genres: this.genres, book: book }
+      data: { title: "Edit book", authors: this.authors, genres: this.genres, book: book }
     });
 
     dialogRef.afterClosed().subscribe(result => {

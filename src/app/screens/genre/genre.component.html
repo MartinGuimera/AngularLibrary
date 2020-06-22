@@ -3,12 +3,12 @@
     <table mat-table [dataSource]="dataSource">
 
       <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef> Identificador </th>
+        <th mat-header-cell *matHeaderCellDef> Id </th>
         <td mat-cell *matCellDef="let genre"> {{genre.id}} </td>
       </ng-container>
 
       <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef> Nombre del genero</th>
+        <th mat-header-cell *matHeaderCellDef> Name of genre</th>
         <td mat-cell *matCellDef="let genre"> {{genre.name}} </td>
       </ng-container>
 
@@ -28,6 +28,6 @@
     </table>
   </div>
   <div class="buttons">
-    <button mat-flat-button class="black_button_category" (click)="newGenre()">Nuevo genero</button>
+    <button mat-flat-button class="black_button_category" (click)="newGenre()">New genre</button>
   </div>
 </div>

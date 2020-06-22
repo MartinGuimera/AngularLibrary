@@ -5,15 +5,15 @@
         <input type="text" matInput placeholder="Filtro" [(ngModel)]="filterName">
       </mat-form-field>
       <mat-form-field appearance="outline" class="input_text_filter">
-        <mat-label>Genero</mat-label>
+        <mat-label>Genre</mat-label>
         <mat-select disableRipple [formControl]="genreControl">
           <mat-option *ngFor="let genre of genres" [value]="genre">{{genre.name}}</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
     <div>
-      <button mat-flat-button class="white_button">Limpiar</button>
-      <button mat-flat-button class="black_button">Filtrar</button>
+      <button mat-flat-button class="white_button">Clear</button>
+      <button mat-flat-button class="black_button">Filter</button>
     </div>
   </div>
   <div class="game_list">
@@ -23,6 +23,6 @@
     </div>
   </div>
   <div class="buttons">
-    <button mat-flat-button class="black_button_category" (click)="newBook()">Nuevo libro</button>
+    <button mat-flat-button class="black_button_category" (click)="newBook()">New book</button>
   </div>
 </div>

@@ -33,7 +33,7 @@ export class AuthorComponent implements OnInit {
     const dialogRef = this.dialog.open(AuthorDialogComponent, {
       width: "auto",
       height: "auto",
-      data: { title: "Nuevo Autor" }
+      data: { title: "New Author" }
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -45,7 +45,7 @@ export class AuthorComponent implements OnInit {
     const dialogRef = this.dialog.open(AuthorDialogComponent, {
       width: "auto",
       height: "auto",
-      data: { title: "Nuevo Autor", author: author }
+      data: { title: "Edit Autor", author: author }
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -58,7 +58,7 @@ export class AuthorComponent implements OnInit {
       disableClose: true,
       width: "auto",
       height: "auto",
-      data: { title: "¿Desea eliminar el autor?" }
+      data: { title: "Do you want to delete author?"}
     });
 
     dialogRef.afterClosed().subscribe(result => {
