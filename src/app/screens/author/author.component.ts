@@ -17,7 +17,7 @@ export class AuthorComponent implements OnInit {
   displayedColumns: string[] = ['id', 'name', 'action'];
   dataSource = new MatTableDataSource<Author>();
 
-  @ViewChild(MatPaginator, {}) paginator: MatPaginator;
+  @ViewChild(MatPaginator, {static:true}) paginator: MatPaginator;
 
   constructor(
     private dialog: MatDialog,

@@ -1,4 +1,3 @@
-import { Publisher } from './../../../core/management/publisher/publisher';
 import { Genre } from './../../../core/management/genre/genre';
 import { Book } from './../../../core/management/book/book';
 import { Component, OnInit, Inject } from '@angular/core';
@@ -18,11 +17,8 @@ export class BookDialogComponent implements OnInit {
   genres: Genre[];
   genre: Genre;
   authors: Author[];
-  publisher : Publisher[];
-  publishers : Publisher;
   genreControl = new FormControl();
   authorControl = new FormControl();
-  publisherControl = new FormControl();
 
   constructor(public dialogRef: MatDialogRef<BookDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) { }
@@ -35,7 +31,6 @@ export class BookDialogComponent implements OnInit {
     this.title = this.data.title;
     this.genres = this.data.genres;
     this.authors = this.data.authors;
-    this.publishers = this.data.publishers
     if (this.data.book != null) {
       this.book = this.data.book;
       this.genreControl.setValue(this.book.genre);
